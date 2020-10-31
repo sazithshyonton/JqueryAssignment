@@ -1,0 +1,51 @@
+.show{
+	display: none;
+}
+
+.slideDownContent{
+	display: none;
+	height: 300px;
+	border: 1px solid red;
+	background-color: green;
+}
+
+.slideUpContent{
+	height: 200px;
+	border: 1px solid red;
+	background-color: green;
+}
+
+.slideToggleContent{
+	height: 200px;
+	border: 1px solid red;
+	background-color: green;
+}
+
+.animate1{
+	background:red;
+	height:50px;
+	width:50px;
+	position:absolute;
+	
+}
+
+.animeRelateContent{
+	background:#34bf91;
+	height:100px;
+	width:100px;
+	position:absolute;
+}
+
+#content #down {
+            padding: 5px;
+            font-size: 18px;
+            text-align: center;
+            background-color: aqua;
+            color: white;
+            border: solid 1px teal;
+            border-radius: 3px;
+        }
+        #content {
+            padding: 40px;
+            display: none;
+        }

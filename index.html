@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--  meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/media.css">
+
+    <title> JavaScriot/Jquery</title>
+	 <!-- Fontawesome Link -->
+	    <script src="https://kit.fontawesome.com/c842d05265.js" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col md 12">
+          <h3>Click the button to show alert</h3>
+          <button class="btn btn-info btn-block btn1">Click Here</button>
+          <h3>Click Show Button to show the Text</h3>
+
+           <button class="btn btn-info btn-block btn2">Show</button>
+           <h2 class="show">You are see this beause you click  Button2</h2>
+
+           <button class="btn btn-info btn-block btn3">Hide</button>
+            <h2 class="hide">Hide This</h2>
+
+            <h2 class="toggle">For Hide and show click Toggle</h2>
+            <button class="btn btn-info btn-block btn4">Toggle</button>
+
+            <h2 class="toggleSlow">For Hide and show click Toggle(slow Toggle)</h2>
+            <button class="btn btn-info btn-block btn5">Toggle Slow</button>
+
+             <h2 class="togglefast">For Hide and show click Toggle(Fast toggle)</h2>
+            <button class="btn btn-info btn-block btn6">Toggle Fast</button>
+
+
+             <h2 class="fadeout">Fade Out</h2>
+            <button class="btn btn-info btn-block btn7">Fade Out</button>
+
+             <h2 class="fadetoggle">Fade Toggle</h2>
+            <button class="btn btn-info btn-block btn8">Fade Toggle</button>
+
+            <h2 class="text-center">jQuery slide</h2>
+
+            <h3 class="slideDown">Click to slide down</h3>
+            <h1 class="slideDownContent">Hello SSb</h1>
+
+              <h3 class="slideUp">Click to slide Up</h3>
+            <h1 class="slideUpContent">Hello SSb</h1>
+
+             <h3 class="slideToggle">Click to slide Toggle</h3>
+            <h1 class="slideToggleContent">Hello SSb</h1>
+
+            <h2 class="text-center">jQuery Animation</h2>
+            <button class="btn btn-dark btn-block leftanime">Start Animation</button>
+            <div class="animate1"></div>
+
+             <h3 style="margin-top: 100px;">jQuery Callback Functions</h3>
+             <button class="btn btn-danger btn-block call1">Hide (Call Back)</button>
+
+              <p class="call2">Hello SSb</p>
+
+              <button class="btn btn-block btn-danger fadeinBtn">Click to fade in boxes</button>
+              <p class="fadeIn" style="display: none;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel asperiores at repellat, quis corrupti sed incidunt eaque non nesciunt ipsam totam aliquid repellendus alias commodi ad consectetur ea molestias sapiente quia nobis saepe illo sint? Ea praesentium beatae eligendi nam modi, aliquam earum? Voluptatum officia ut in, veniam porro deserunt.</p>
+
+              <h2 class="text-center">jQuery Animation Related Value</h2>
+              <button class="btn btn-block btn-secondary animeRelatebtn">Click For Aniumation</button>
+              <div  class="animeRelateContent"></div>
+
+              <h2 class="text-center" style="margin-top: 200px;">jQuery Stop Method</h2>
+               <button id="close" class="btn btn-block btn-dark">Stop Slide </button>
+        <div id="down">Slide Down</div>
+        <div id="content">Hello SSB</div>
+
+        <h2 class="text-center" >jQuery Method chining</h2>
+        <p id="paragraph">Hello SSB , LETS LEARN TOGETHER</p>
+        <button class="btn btn-secondary btn-block chiningbtn">Click Here</button>
+
+        <h2 class="text-center" >jQuery Dom</h2>
+
+        <button class="btn btn-block btn-danger dombtn">Click Here</button>
+  <p class="domPara">This is a <b>paragraph</b>।</p>
+
+<h2 class="text-center" >jQuery Value Show</h2>
+  <button class="btn btn-block btn-success btnInput">Click to see valuee</button>
+  <p class="Input">Name: <input type="text" value="sharon"></p>
+
+        </div>
+      </div>
+    </div>
+  
+    <!-- JS links -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        alert("Hello SSB");
+        //alert
+        $(".btn1").click(function(){
+          alert("Huuuh you click the button");
+        });
+        //show
+        $(".btn2").click(function(){
+         $(".show").show();
+        });
+        //Hide
+         $(".btn3").click(function(){
+         $(".hide").hide();
+        });
+         //Toggle
+         $(".btn4").click(function(){
+         $(".toggle").toggle();
+        });
+         //Toggle slow
+         $(".btn5").click(function(){
+         $(".toggleSlow").toggle("slow");
+        });
+         //Toggle fast
+         $(".btn6").click(function(){
+         $(".togglefast").toggle("fast");
+        });
+         //Fade In
+         $(".btn7").click(function(){
+         $(".fadeout").fadeOut(1000);
+        });
+         //Fade Toggle
+         $(".btn8").click(function(){
+         $(".fadetoggle").fadeToggle(1000);
+        });
+
+         //slide down
+         $(".slideDown").click(function(){
+    $(".slideDownContent").slideDown("slow");
+  });
+         //slide Up
+         $(".slideUp").click(function(){
+    $(".slideUpContent").slideUp("slow");
+  });
+
+          //slide Toggle
+         $(".slideToggle").click(function(){
+    $(".slideToggleContent").slideToggle("slow");
+  });
+
+         //left animation
+         $(".leftanime").click(function(){
+    $(".animate1").animate({left: '500px'});
+  });
+
+         //call back 
+          $(".call1").click(function(){
+    $(".call2").hide("slow", function(){
+      alert("Hello SSB NOW HIDDEN");
+    });
+  });
+
+          //fadeIn
+          $(".fadeinBtn").click(function(){
+    $(".fadeIn").fadeIn();
+  });
+
+          //jQuery Animation Related Value
+          $(".animeRelatebtn").click(function(){
+                $(".animeRelateContent").animate({
+                    left: '200px',
+                    height: '+=120px',
+                    width: '+=120px'
+                });
+            });
+         
+         //jQuery Stop Method
+         $("#down").click(function(){
+                $("#content").slideDown(4000);
+            });
+            $("#close").click(function(){
+                $("#content").stop();
+            });
+
+            //jQuery Method chining
+            $(".chiningbtn").click(function(){
+                $("#paragraph").css({"background-color": "aqua", "color": "red"})
+                    .slideUp(2000)
+                    .slideDown(2000);
+            });
+
+            //Jquery dom
+            $(".dombtn").click(function(){
+      alert($(".domPara").text());
+    });
+
+            //jquery value input
+           $(".btnInput").click(function(){
+        alert($("input").val());
+    });
+
+      });
+    </script>
+  </body>
+</html>
